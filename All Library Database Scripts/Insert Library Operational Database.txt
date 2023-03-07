@@ -1,0 +1,2052 @@
+--insert students data
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Hein Thit Sar','MALE','43 main street ',4);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Htar Htar Hlaing','FEMALE','44 main street ',6);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Kaung Htet Hein','MALE','45 main street ',1);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Kaung Seit Thar','MALE','46 main street ',1);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Kaung Sint Yang','MALE','47 main street ',4);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Kyaw Wai Yan Htike','MALE','48 main street ',3);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Kyi Lin Lin Thant','FEMALE','49 main street ',5);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Maysee Sar','FEMALE','50 main street ',4);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Min Thike Khant','MALE','51 main street ',2);
+
+INSERT INTO student (stu_name,stu_gender,stu_address,stu_classYear) VALUES ('Mya Myint Zu Maung','FEMALE','52 main street ',6);
+
+
+--insert books data
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('An Immense World','Ed Yong','Science',2022,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('Inflence:Science and Pracitce','Cialdini Robert','Science',2008,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('Death by Landscape','Elvia Wilk','Science',2022,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('Atlas of Human Anatomy','Netter MD','Science',2014,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('Life:The Science of Biology','Sadava','Science',2012,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('Animal Farm','George Orwell','Classics',1945,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('And Then There Were None','Agatha Christie','Classics',1939,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('The Little Prince','Antoine de Saint','Classics',1943,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('The Metamorphosis','Franz Kafka','Classics',1915,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('To Kill a Mockingbird','Harper Lee','Classics',1960,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('The It Girl','Ruth Ware','Thriller',2022,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('Gone Girl','Gillian Flynn','Thriller',2012,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('The New Neighbor','Karen Cleveland','Thriller',2022,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('The Last to Vanish','Megan Miranda','Thriller',2022,1);
+
+INSERT INTO book (book_title,book_author,book_category,publication_year,book_status) VALUES ('When No One is Watching','Alyssa Cole','Thriller',2020,1);
+
+
+
+--Borrow Return Data 
+--2022
+--January
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(1,3,10,'03/JAN/2022','08/JAN/2022','07/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(2,5,11,'05/JAN/2022','10/JAN/2022','13/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(3,9,6,'11/JAN/2022','16/JAN/2022','18/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(4,1,2,'11/JAN/2022','16/JAN/2022','15/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(5,2,10,'11/JAN/2022','16/JAN/2022','18/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(6,9,13,'12/JAN/2022','17/JAN/2022','20/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(7,6,15,'13/JAN/2022','18/JAN/2022','17/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(8,8,3,'17/JAN/2022','22/JAN/2022','24/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(9,6,10,'18/JAN/2022','23/JAN/2022','21/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(10,9,12,'20/JAN/2022','25/JAN/2022','24/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(11,2,14,'20/JAN/2022','25/JAN/2022','27/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(12,7,10,'25/JAN/2022','30/JAN/2022','01/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(13,3,12,'25/JAN/2022','30/JAN/2022','31/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(14,4,15,'27/JAN/2022','01/FEB/2022','30/JAN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(15,9,7,'27/JAN/2022','01/FEB/2022','04/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(16,2,8,'28/JAN/2022','02/FEB/2022','04/FEB/2022');
+
+--February
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(17,5,6,'01/FEB/2022','06/FEB/2022','04/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(18,9,13,'01/FEB/2022','06/FEB/2022','08/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(19,8,12,'02/FEB/2022','07/FEB/2022','05/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(20,5,7,'03/FEB/2022','08/FEB/2022','07/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(21,1,9,'03/FEB/2022','08/FEB/2022','11/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(22,8,3,'08/FEB/2022','13/FEB/2022','17/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(23,10,2,'08/FEB/2022','13/FEB/2022','15/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(24,1,3,'14/FEB/2022','19/FEB/2022','21/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(25,9,11,'14/FEB/2022','19/FEB/2022','18/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(26,2,6,'18/FEB/2022','23/FEB/2022','26/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(27,7,12,'21/FEB/2022','26/FEB/2022','24/FEB/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(28,2,2,'21/FEB/2022','26/FEB/2022','25/FEB/2022');
+
+--March
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(29,10,1,'01/MAR/2022','06/MAR/2022','09/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(30,4,12,'01/MAR/2022','06/MAR/2022','05/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(31,3,6,'03/MAR/2022','08/MAR/2022','07/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(32,7,7,'04/MAR/2022','09/MAR/2022','07/MAR/2022');
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(33,4,8,'08/MAR/2022','13/MAR/2022','15/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(34,6,9,'10/MAR/2022','15/MAR/2022','14/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(35,10,4,'10/MAR/2022','15/MAR/2022','16/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(36,9,10,'14/MAR/2022','19/MAR/2022','21/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(37,1,4,'17/MAR/2022','22/MAR/2022','25/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(38,4,6,'18/MAR/2022','23/MAR/2022','21/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(39,5,9,'18/MAR/2022','23/MAR/2022','26/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(40,7,12,'25/MAR/2022','30/MAR/2022','31/MAR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(41,4,13,'29/MAR/2022','03/APR/2022','05/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(42,9,7,'31/MAR/2022','05/APR/2022','08/APR/2022');
+
+--April
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(43,10,9,'04/APR/2022','09/APR/2022','13/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(44,1,5,'04/APR/2022','09/APR/2022','08/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(45,3,4,'05/APR/2022','10/APR/2022','14/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(46,7,3,'06/APR/2022','11/APR/2022','10/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(47,10,12,'07/APR/2022','12/APR/2022','14/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(48,3,9,'18/APR/2022','23/APR/2022','22/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(49,6,4,'18/APR/2022','23/APR/2022','21/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(50,1,7,'19/APR/2022','24/APR/2022','25/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(51,6,3,'21/APR/2022','26/APR/2022','29/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(52,9,8,'21/APR/2022','26/APR/2022','25/APR/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(53,1,12,'25/APR/2022','30/APR/2022','01/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(54,4,9,'27/APR/2022','02/APR/2022','05/MAY/2022');
+
+--May
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(55,2,13,'03/MAY/2022','08/MAY/2022','06/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(56,3,6,'04/MAY/2022','09/MAY/2022','12/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(57,8,8,'04/MAY/2022','09/MAY/2022','07/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(58,9,10,'09/MAY/2022','14/MAY/2022','16/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(59,9,8,'11/MAY/2022','16/MAY/2022','15/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(60,7,7,'11/MAY/2022','16/MAY/2022','20/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(61,3,12,'12/MAY/2022','17/MAY/2022','18/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(62,10,13,'13/MAY/2022','18/MAY/2022','17/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(63,2,3,'16/MAY/2022','21/MAY/2022','24/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(64,10,12,'16/MAY/2022','21/MAY/2022','22/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(65,6,13,'27/MAY/2022','01/JUN/2022','31/MAY/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(66,7,14,'30/MAY/2022','04/JUN/2022','06/JUN/2022');
+
+--June
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(67,10,7,'01/JUN/2022','06/JUN/2022','04/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(68,3,15,'01/JUN/2022','06/JUN/2022','09/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(69,7,3,'02/JUN/2022','07/JUN/2022','06/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(70,9,3,'03/JUN/2022','08/JUN/2022','06/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(71,1,7,'07/JUN/2022','12/JUN/2022','13/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(72,3,1,'16/JUN/2022','21/JUN/2022','24/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(73,2,12,'20/JUN/2022','25/JUN/2022','24/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(74,5,2,'21/JUN/2022','26/JUN/2022','27/JUN/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(75,8,7,'29/JUN/2022','04/JUL/2022','06/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(76,6,15,'23/JUN/2022','28/JUN/2022','26/JUN/2022');
+
+--July
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(77,4,7,'01/JUL/2022','06/JUL/2022','04/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(78,1,2,'04/JUL/2022','09/JUL/2022','12/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(79,5,13,'04/JUL/2022','09/JUL/2022','11/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(80,9,12,'05/JUL/2022','10/JUL/2022','09/JUL/2022');
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(81,3,4,'08/JUL/2022','13/JUL/2022','12/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(82,5,3,'13/JUL/2022','18/JUL/2022','20/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(83,10,14,'14/JUL/2022','19/JUL/2022','22/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(84,9,9,'14/JUL/2022','19/JUL/2022','17/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(85,8,10,'20/JUL/2022','25/JUL/2022','27/JUL/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(86,9,4,'25/JUL/2022','30/JUL/2022','02/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(87,1,2,'28/JUL/2022','02/AUG/2022','01/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(88,3,13,'28/JUL/2022','02/AUG/2022','04/AUG/2022');
+
+
+--August
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(89,6,12,'01/AUG/2022','06/AUG/2022','07/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(90,3,8,'03/AUG/2022','08/AUG/2022','11/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(91,8,4,'04/AUG/2022','09/AUG/2022','08/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(92,7,5,'04/AUG/2022','09/AUG/2022','11/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(93,5,14,'09/AUG/2022','14/AUG/2022','13/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(94,2,6,'10/AUG/2022','15/AUG/2022','13/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(95,4,10,'10/AUG/2022','15/AUG/2022','18/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(96,3,15,'12/AUG/2022','17/AUG/2022','20/AUG/2022');
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(97,4,1,'15/AUG/2022','20/AUG/2022','18/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(98,10,2,'18/AUG/2022','23/AUG/2022','25/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(99,5,9,'24/AUG/2022','29/AUG/2022','31/AUG/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(100,7,13,'29/AUG/2022','03/SEP/2022','02/SEP/2022');
+
+--September
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(101,9,8,'01/SEP/2022','06/SEP/2022','05/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(102,10,15,'02/SEP/2022','07/SEP/2022','08/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(103,1,4,'02/SEP/2022','07/SEP/2022','06/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(104,3,6,'07/SEP/2022','12/SEP/2022','15/SEP/2022');
+
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(105,10,14,'08/SEP/2022','13/SEP/2022','14/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(106,6,12,'08/SEP/2022','13/SEP/2022','12/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(107,3,8,'13/SEP/2022','18/SEP/2022','20/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(108,2,2,'20/SEP/2022','25/SEP/2022','28/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(109,4,12,'21/SEP/2022','26/SEP/2022','25/SEP/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(110,9,14,'26/SEP/2022','01/OCT/2022','03/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(111,6,2,'28/SEP/2022','03/OCT/2022','02/OCT/2022');
+
+--October
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(112,6,6,'03/OCT/2022','08/OCT/2022','07/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(113,10,12,'05/OCT/2022','10/OCT/2022','09/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(114,1,10,'06/OCT/2022','11/OCT/2022','13/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(115,7,3,'11/OCT/2022','16/OCT/2022','19/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(116,9,8,'11/OCT/2022','16/OCT/2022','15/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(117,1,7,'14/OCT/2022','19/OCT/2022','18/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(118,6,10,'18/OCT/2022','23/OCT/2022','24/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(119,6,12,'20/OCT/2022','25/OCT/2022','27/OCT/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(120,1,8,'24/OCT/2022','29/OCT/2022','31/OCT/2022');
+
+
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(121,5,2,'26/OCT/2022','31/OCT/2022','30/OCT/2022');
+
+--November
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(122,3,13,'01/NOV/2022','06/NOV/2022','05/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(123,4,2,'03/NOV/2022','08/NOV/2022','07/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(124,7,3,'05/NOV/2022','10/NOV/2022','12/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(125,4,2,'08/NOV/2022','13/NOV/2022','16/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(126,5,11,'10/NOV/2022','15/NOV/2022','17/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(127,1,4,'16/NOV/2022','21/NOV/2022','19/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(128,1,1,'18/NOV/2022','23/NOV/2022','26/NOV/2022');
+
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(129,4,13,'23/NOV/2022','28/NOV/2022','29/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(130,8,8,'23/NOV/2022','28/NOV/2022','27/NOV/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(131,6,3,'29/NOV/2022','04/DEC/2022','06/DEC/2022');
+
+--December
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(132,9,2,'01/DEC/2022','06/DEC/2022','05/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(133,10,4,'02/DEC/2022','07/DEC/2022','09/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(134,1,3,'09/DEC/2022','14/DEC/2022','16/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(135,2,6,'20/DEC/2022','25/DEC/2022','24/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(136,5,3,'20/DEC/2022','25/DEC/2022','23/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(137,1,2,'21/DEC/2022','26/DEC/2022','28/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(138,10,6,'23/DEC/2022','28/DEC/2022','29/DEC/2022');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(139,4,3,'26/DEC/2022','31/DEC/2022','30/DEC/2022');
+
+--2021
+--January
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(140,1,3,'3/JAN/2021','8/JAN/2021','7/JAN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(141,2,4,'7/JAN/2021','12/JAN/2021','14/JAN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(142,1,6,'9/JAN/2021','14/JAN/2021','15/JAN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(143,4,1,'9/JAN/2021','14/JAN/2021','13/JAN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(144,3,7,'16/JAN/2021','21/JAN/2021','24/JAN/2021');
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(145,6,2,'21/JAN/2021','26/JAN/2021','24/JAN/2021');
+
+--February
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(146,1,2,'1/FEB/2021','6/FEB/2021','8/FEB/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(147,4,4,'4/FEB/2021','9/FEB/2021','12/FEB/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(148,3,3,'6/FEB/2021','11/FEB/2021','10/FEB/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(149,5,6,'11/FEB/2021','16/FEB/2021','15/FEB/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(150,4,5,'18/FEB/2021','23/FEB/2021','27/FEB/2021');
+
+--March
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(151,2,1,'4/MAR/2021','9/MAR/2021','8/MAR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(152,1,4,'7/MAR/2021','12/MAR/2021','14/MAR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(153,2,6,'7/MAR/2021','12/MAR/2021','13/MAR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(154,1,7,'14/MAR/2021','19/MAR/2021','21/MAR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(155,6,6,'18/MAR/2021','23/MAR/2021','26/MAR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(156,9,1,'25/MAR/2021','30/MAR/2021','29/MAR/2021');
+
+--April
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(157,6,5,'1/APR/2021','6/APR/2021','8/APR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(158,3,4,'3/APR/2021','8/APR/2021','7/APR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(159,5,8,'8/APR/2021','13/APR/2021','17/APR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(160,2,7,'15/APR/2021','20/APR/2021','19/APR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(161,6,7,'22/APR/2021','27/APR/2021','29/APR/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(162,5,9,'22/APR/2021','27/APR/2021','30/APR/2021');
+
+--May
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(163,1,5,'2/MAY/2021','7/MAY/2021','6/MAY/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(164,4,8,'6/MAY/2021','11/MAY/2021','12/MAY/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(165,6,10,'7/MAY/2021','12/MAY/2021','11/MAY/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(166,4,10,'13/MAY/2021','18/MAY/2021','16/MAY/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(167,6,11,'13/MAY/2021','18/MAY/2021','20/MAY/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(168,7,7,'21/MAY/2021','26/MAY/2021','25/MAY/2021');
+
+
+--June
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(169,6,1,'3/JUN/2021','8/JUN/2021','11/JUN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(170,3,9,'5/JUN/2021','10/JUN/2021','11/JUN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(171,4,2,'8/JUN/2021','13/JUN/2021','11/JUN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(172,3,8,'14/JUN/2021','19/JUN/2021','22/JUN/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(173,4,3,'17/JUN/2021','22/JUN/2021','23/JUN/2021');
+
+
+--July
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(174,6,3,'1/JUL/2021','6/JUL/2021','8/JUL/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(175,5,4,'1/JUL/2021','6/JUL/2021','9/JUL/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(176,9,7,'15/JUL/2021','20/JUL/2021','19/JUL/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(177,6,4,'17/JUL/2021','22/JUL/2021','20/JUL/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(178,5,3,'21/JUL/2021','26/JUL/2021','27/JUL/2021');
+
+--August 
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(179,1,10,'2/AUG/2021','7/AUG/2021','9/AUG/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(180,5,5,'10/AUG/2021','15/AUG/2021','14/AUG/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(181,1,12,'14/AUG/2021','19/AUG/2021','18/AUG/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(182,9,4,'14/AUG/2021','19/AUG/2021','22/AUG/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(183,5,7,'20/AUG/2021','25/AUG/2021','26/AUG/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(184,9,8,'25/AUG/2021','30/AUG/2021','1/SEP/2021');
+
+--September
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(185,7,8,'4/SEP/2021','9/SEP/2021','8/SEP/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(186,1,1,'9/SEP/2021','14/SEP/2021','13/SEP/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(187,2,8,'12/SEP/2021','17/SEP/2021','20/SEP/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(188,7,9,'15/SEP/2021','20/SEP/2021','21/SEP/2021');
+
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(189,2,6,'20/SEP/2021','25/SEP/2021','27/SEP/2021');
+
+--October
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(190,1,4,'5/OCT/2021','10/OCT/2021','12/OCT/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(191,6,7,'8/OCT/2021','13/OCT/2021','17/OCT/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(192,5,10,'13/OCT/2021','18/OCT/2021','17/OCT/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(193,2,1,'16/OCT/2021','21/OCT/2021','20/OCT/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(194,1,8,'23/OCT/2021','28/OCT/2021','30/OCT/2021');
+
+--November 
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(195,6,10,'3/NOV/2021','8/NOV/2021','7/NOV/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(196,5,8,'3/NOV/2021','8/NOV/2021','11/NOV/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(197,9,2,'11/NOV/2021','16/NOV/2021','15/NOV/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(198,5,9,'16/NOV/2021','21/NOV/2021','20/NOV/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(199,9,3,'21/NOV/2021','26/NOV/2021','29/NOV/2021');
+
+
+
+--December
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(200,2,5,'4/DEC/2021','9/DEC/2021','11/DEC/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(201,5,2,'6/DEC/2021','11/DEC/2021','14/DEC/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(202,9,6,'16/DEC/2021','21/DEC/2021','20/DEC/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(203,2,10,'20/DEC/2021','25/DEC/2021','26/DEC/2021');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(204,1,11,'23/DEC/2021','28/DEC/2021','26/DEC/2021');
+
+--2020
+--January
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(205,1,3,'1/JAN/2020','6/JAN/2020','5/JAN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(206,3,4,'4/JAN/2020','9/JAN/2020','11/JAN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(207,2,3,'10/JAN/2020','15/JAN/2020','19/JAN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(208,5,1,'13/JAN/2020','18/JAN/2020','19/JAN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(209,3,7,'22/JAN/2020','27/JAN/2020','25/JAN/2020');
+
+--February
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(210,1,12,'2/FEB/2020','7/FEB/2020','8/FEB/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(211,4,1,'8/FEB/2020','13/FEB/2020','17/FEB/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(212,5,10,'15/FEB/2020','20/FEB/2020','19/FEB/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(213,1,15,'17/FEB/2020','22/FEB/2020','23/FEB/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(214,4,3,'22/FEB/2020','27/FEB/2020','26/FEB/2020');
+
+
+
+
+--March
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(215,1,1,'1/MAR/2020','6/MAR/2020','7/MAR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(216,6,3,'3/MAR/2020','8/MAR/2020','10/MAR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(217,2,14,'9/MAR/2020','14/MAR/2020','13/MAR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(218,4,15,'24/MAR/2020','29/MAR/2020','30/MAR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(219,2,10,'25/MAR/2020','30/MAR/2020','2/APR/2020');
+
+--April
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(220,3,12,'4/APR/2020','9/APR/2020','7/APR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(221,4,2,'12/APR/2020','17/APR/2020','16/APR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(222,2,1,'14/APR/2020','19/APR/2020','21/APR/2020');
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(223,5,12,'17/APR/2020','22/APR/2020','21/APR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(224,3,8,'24/APR/2020','29/APR/2020','30/APR/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(225,5,14,'24/APR/2020','29/APR/2020','1/MAY/2020');
+
+--May
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(226,3,1,'4/MAY/2020','9/MAY/2020','8/MAY/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(227,2,9,'10/MAY/2020','15/MAY/2020','14/MAY/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(228,4,3,'11/MAY/2020','16/MAY/2020','19/MAY/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(229,2,6,'17/MAY/2020','22/MAY/2020','24/MAY/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(230,5,3,'24/MAY/2020','29/MAY/2020','30/MAY/2020');
+
+--June
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(231,3,15,'2/JUN/2020','7/JUN/2020','8/JUN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(232,1,14,'8/JUN/2020','13/JUN/2020','16/JUN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(233,4,6,'12/JUN/2020','17/JUN/2020','19/JUN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(234,1,10,'18/JUN/2020','23/JUN/2020','22/JUN/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(235,4,7,'24/JUN/2020','29/JUN/2020','27/JUN/2020');
+
+--July
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(236,1,9,'6/JUL/2020','11/JUL/2020','10/JUL/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(237,4,4,'9/JUL/2020','14/JUL/2020','16/JUL/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(238,5,6,'19/JUL/2020','24/JUL/2020','27/JUL/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(239,2,4,'23/JUL/2020','28/JUL/2020','29/JUL/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(240,5,2,'25/JUL/2020','30/JUL/2020','29/JUL/2020');
+
+--August
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(241,1,7,'5/AUG/2020','10/AUG/2020','12/AUG/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(242,5,8,'15/AUG/2020','20/AUG/2020','18/AUG/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(243,3,9,'17/AUG/2020','22/AUG/2020','25/AUG/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(244,2,10,'21/AUG/2020','26/AUG/2020','25/AUG/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(245,3,6,'25/AUG/2020','30/AUG/2020','28/AUG/2020');
+
+--September
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(246,2,5,'2/SEP/2020','7/SEP/2020','10/SEP/2020');
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(247,3,2,'7/SEP/2020','12/SEP/2020','13/SEP/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(248,5,5,'17/SEP/2020','22/SEP/2020','25/SEP/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(249,4,13,'25/SEP/2020','30/SEP/2020','29/SEP/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(250,2,7,'25/SEP/2020','30/SEP/2020','28/SEP/2020');
+
+--October
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(251,1,8,'4/OCT/2020','9/OCT/2020','8/OCT/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(252,5,4,'13/OCT/2020','18/OCT/2020','20/OCT/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(253,4,10,'14/OCT/2020','19/OCT/2020','20/OCT/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(254,1,6,'24/OCT/2020','29/OCT/2020','31/OCT/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(255,5,9,'25/OCT/2020','30/OCT/2020','29/OCT/2020');
+
+--November
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(256,1,2,'7/NOV/2020','12/NOV/2020','15/NOV/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(257,2,9,'7/NOV/2020','12/NOV/2020','11/NOV/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(258,4,11,'15/NOV/2020','20/NOV/2020','21/NOV/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(259,3,3,'18/NOV/2020','23/NOV/2020','26/NOV/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(260,4,13,'22/NOV/2020','27/NOV/2020','26/NOV/2020');
+
+--December
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(261,1,4,'6/DEC/2020','11/DEC/2020','10/DEC/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(262,3,14,'6/DEC/2020','11/DEC/2020','14/DEC/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(263,2,11,'16/DEC/2020','21/DEC/2020','23/DEC/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(264,2,13,'20/DEC/2020','25/DEC/2020','26/DEC/2020');
+
+insert into borrow_return (borrow_id,student_id,book_id,borrow_date,due_date,return_date)
+values
+(265,5,2,'23/DEC/2020','28/DEC/2020','27/DEC/2020');
+
+
+--fine
+
+
+-- (2022)
+-- January
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(2,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(3,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(5,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(6,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(8,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(11,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(12,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(13,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(15,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(16,2,2000);
+
+--February
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(18,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(21,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(22,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(23,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(24,2,2000);
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(26,3,3000);
+
+--March
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(29,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(33,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(35,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(36,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(37,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(39,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(40,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(41,2,2000);
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(42,3,3000);
+
+--April
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(43,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(44,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(47,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(50,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(51,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(53,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(54,3,3000);
+
+--May
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(56,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(58,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(60,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(61,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(63,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(64,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(66,2,2000);
+
+--June
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(68,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(71,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(72,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(74,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(75,2,2000);
+
+--JULY
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(78,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(79,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(82,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(83,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(85,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(86,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(88,2,2000);
+
+--August
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(89,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(90,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(92,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(95,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(96,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(98,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(99,2,2000);
+
+--September
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(102,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(104,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(105,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(107,2,2000);
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(108,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(110,2,2000);
+
+--October
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(114,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(115,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(118,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(119,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(120,2,2000);
+
+
+--November
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(124,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(125,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(126,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(128,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(129,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(131,2,2000);
+
+--December
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(133,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(134,2,2000);
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(137,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(138,1,1000);
+
+--2021
+--January
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(141,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(142,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(144,3,3000);
+
+--February
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(146,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(147,3,3000);
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(150,4,4000);
+
+--March
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(152,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(153,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(154,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(155,3,3000);
+
+--April
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(157,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(159,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(161,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(162,3,3000);
+
+
+--May
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(164,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(167,2,2000);
+
+--June
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(169,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(170,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(172,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(173,1,1000);
+
+--July
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(174,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(175,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(178,1,1000);
+
+--August
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(179,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(182,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(183,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(184,2,2000);
+
+--September
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(187,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(188,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(189,2,2000);
+
+--October
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(190,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(191,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(194,2,2000);
+
+--November
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(196,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(199,3,3000);
+
+--December
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(200,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(201,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(203,1,1000);
+
+--2020
+--January
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(206,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(207,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(208,1,1000);
+
+--February
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(210,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(211,4,4000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(213,1,1000);
+
+--March
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(215,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(216,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(218,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(219,3,3000);
+
+--April
+
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(222,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(224,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(225,2,2000);
+
+--May
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(228,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(229,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(230,1,1000);
+
+--June
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(231,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(232,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(233,2,2000);
+
+--July
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(237,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(238,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(239,1,1000);
+
+--August
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(241,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(243,3,3000);
+
+--September
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(246,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(247,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(248,3,3000);
+
+--October
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(252,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(253,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(254,2,2000);
+
+--November
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(256,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(258,1,1000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(259,3,3000);
+
+--December
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(262,3,3000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(263,2,2000);
+
+insert into fine
+( borrow_id,overdue_days,fine_amount)
+values
+(264,1,1000);

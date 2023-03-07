@@ -1,0 +1,83 @@
+--1. what is the total number of books borrowed for each year?
+
+select  t.theYear as year,sum(quantity) as quantity from borrowreturn_fact b 
+inner join time_dim t on b.timeid=t.timeid 
+group by t.theYear;
+
+--2.what is the total number of books borrowed per quarter in a specific year?
+
+select t.theQuarter as quarter,sum(quantity) as quantity from borrowreturn_fact b 
+inner join time_dim t 
+on b.timeid=t.timeid 
+where t.theYear=2022
+group by t.theQuarter;
+
+--3what is the total number of books borrowed for each month of specific year?
+
+select t.theMonth as month,sum(quantity) as quantity from borrowreturn_fact b
+inner join time_dim t 
+on b.timeid=t.timeid 
+where t.theYear=2022
+group by t.theMonth;
+
+--4. what is the total amount of fine for each year?
+
+select t.theYear as year,sum(fine) as fine_amount  from borrowreturn_fact b 
+inner join time_dim t 
+on b.timeid=t.timeid 
+group by t.theYear;
+
+--5.what is the total amount of fines per quarter in a specific year?
+
+select t.theQuarter as quarter,sum(fine) as fine_amount from borrowreturn_fact b 
+inner join time_dim t
+on b.timeid=t.timeid 
+where t.theYear=2022
+group by t.theQuarter;
+
+--6.what is the total amount of fine for each month of specific year?
+
+select t.theMonth as month,sum(fine) as fine_amount from borrowreturn_fact b 
+inner join time_dim t 
+on b.timeid=t.timeid 
+where t.theYear=2022
+group by t.theMonth;
+
+--7.what is the total number of books borrowed by a specific student per month in a specific year? 
+
+select t.theMonth as month,sum(quantity) as quantity from borrowreturn_fact b 
+inner join time_dim t 
+on b.timeid=t.timeid 
+where b.student_id=2 and t.theYear=2022 
+group by t.theMonth;
+
+--8.what is the total amount of fines per month for a specific student in a specific year? 
+
+select t.theMonth as month,sum(fine) as fine_amount  from borrowreturn_fact b 
+inner join time_dim t 
+on b.timeid=t.timeid 
+where b.student_id=2 and t.theYear=2022 
+group by t.theMonth;
+
+--9.what are the total number of books borrowed by males and females each year?
+
+select t.theYear,s.student_gender,sum(quantity) as quantity from borrowreturn_fact b 
+inner join student_dim s on 
+b.student_id=s.student_id  
+inner join time_dim t on
+b.timeid=t.timeid
+group by s.student_gender,t.theYear
+order by s.student_gender,t.theYear;
+
+--10.what are the total fines for males and females each year? 
+
+select t.theYear,s.student_gender,sum(fine) as fine_amount from borrowreturn_fact b 
+inner join student_dim s on 
+b.student_id=s.student_id  
+inner join time_dim t on
+b.timeid=t.timeid
+group by s.student_gender,t.theYear
+order by s.student_gender,t.theYear;
+
+
+

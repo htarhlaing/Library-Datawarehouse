@@ -1,0 +1,382 @@
+--insert book dimension
+insert into book_dim(book_id,book_title,book_author,book_category)(select book_id,book_title,book_author,book_category from book);
+
+--insert student dimension
+insert into student_dim(student_id,student_name,student_gender,student_classyear)(select student_id,stu_name,stu_gender,stu_classyear from student);
+
+--insert time dimension for 2022
+insert into time_dim(themonth,thequarter,theyear) values (1,1,2022);
+insert into time_dim(themonth,thequarter,theyear) values (2,1,2022);
+insert into time_dim(themonth,thequarter,theyear) values (3,1,2022);
+insert into time_dim(themonth,thequarter,theyear) values (4,2,2022);
+insert into time_dim(themonth,thequarter,theyear) values (5,2,2022);
+insert into time_dim(themonth,thequarter,theyear) values (6,2,2022);
+insert into time_dim(themonth,thequarter,theyear) values (7,3,2022);
+insert into time_dim(themonth,thequarter,theyear) values (8,3,2022);
+insert into time_dim(themonth,thequarter,theyear) values (9,3,2022);
+insert into time_dim(themonth,thequarter,theyear) values (10,4,2022);
+insert into time_dim(themonth,thequarter,theyear) values (11,4,2022);
+insert into time_dim(themonth,thequarter,theyear) values (12,4,2022);
+
+--insert time dimension for 2021
+insert into time_dim(themonth,thequarter,theyear) values (1,1,2021);
+insert into time_dim(themonth,thequarter,theyear) values (2,1,2021);
+insert into time_dim(themonth,thequarter,theyear) values (3,1,2021);
+insert into time_dim(themonth,thequarter,theyear) values (4,2,2021);
+insert into time_dim(themonth,thequarter,theyear) values (5,2,2021);
+insert into time_dim(themonth,thequarter,theyear) values (6,2,2021);
+insert into time_dim(themonth,thequarter,theyear) values (7,3,2021);
+insert into time_dim(themonth,thequarter,theyear) values (8,3,2021);
+insert into time_dim(themonth,thequarter,theyear) values (9,3,2021);
+insert into time_dim(themonth,thequarter,theyear) values (10,4,2021);
+insert into time_dim(themonth,thequarter,theyear) values (11,4,2021);
+insert into time_dim(themonth,thequarter,theyear) values (12,4,2021);
+
+--insert time dimension for 2020
+insert into time_dim(themonth,thequarter,theyear) values (1,1,2020);
+insert into time_dim(themonth,thequarter,theyear) values (2,1,2020);
+insert into time_dim(themonth,thequarter,theyear) values (3,1,2020);
+insert into time_dim(themonth,thequarter,theyear) values (4,2,2020);
+insert into time_dim(themonth,thequarter,theyear) values (5,2,2020);
+insert into time_dim(themonth,thequarter,theyear) values (6,2,2020);
+insert into time_dim(themonth,thequarter,theyear) values (7,3,2020);
+insert into time_dim(themonth,thequarter,theyear) values (8,3,2020);
+insert into time_dim(themonth,thequarter,theyear) values (9,3,2020);
+insert into time_dim(themonth,thequarter,theyear) values (10,4,2020);
+insert into time_dim(themonth,thequarter,theyear) values (11,4,2020);
+insert into time_dim(themonth,thequarter,theyear) values (12,4,2020);
+
+--insert borrowReturn fact table
+--2022
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 1 as timeId,b.student_id, b.book_id,count(b.book_id),coalesce(sum(f.fine_amount),0)
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/01/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/01/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 2 as timeId,b.student_id, b.book_id,count(b.book_id),coalesce(sum(f.fine_amount),0)
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/02/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/02/28','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 3 as timeId,b.student_id, b.book_id,count(b.book_id),coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/03/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/03/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 4 as timeId,b.student_id, b.book_id,count(b.book_id),coalesce(sum(f.fine_amount),0)
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/04/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/04/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 5 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/05/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/05/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 6 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/06/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/06/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 7 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/07/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/07/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 8 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/08/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/08/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 9 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/09/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/09/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 10 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/10/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/10/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 11 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/11/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/11/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 12 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2022/12/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2022/12/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+--2021
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 13 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/01/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/01/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 14 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/02/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/02/28','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 15 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/03/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/03/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 16 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/04/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/04/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 17 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/05/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/05/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 18 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/06/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/06/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 19 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/07/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/07/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 20 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/08/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/08/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 21 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/09/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/09/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 22 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/10/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/10/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 23 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/11/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/11/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 24 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2021/12/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2021/12/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+--------------------------------2020
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 25 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/01/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/01/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 26 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/02/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/02/29','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 27 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/03/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/03/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 28 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/04/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/04/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 29 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/05/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/05/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 30 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/06/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/06/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 31 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/07/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/07/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 32 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/08/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/08/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 33 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/09/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/09/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 34 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/10/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/10/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 35 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/11/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/11/30','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+insert into borrowreturn_fact (timeid,student_id,book_id,quantity,fine )(
+select 36 as timeId,b.student_id, b.book_id,count(b.book_id)  ,coalesce(sum(f.fine_amount),0) 
+from fine f
+full outer join borrow_return b
+on b.borrow_id=f.borrow_id
+WHERE b.borrow_date >= TO_DATE('2020/12/01', 'yyyy/mm/dd')
+AND b.borrow_date <= TO_DATE('2020/12/31','yyyy/mm/dd')
+GROUP BY b.book_id,b.student_id);
+
+
+
+
+
+
+

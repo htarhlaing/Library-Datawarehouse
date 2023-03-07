@@ -1,0 +1,44 @@
+-- Enter into oracle using sql plus ( username: sys as sysdba)
+
+alter session set "_ORACLE_SCRIPT"=true;
+
+-- Create a dba user acount for data warehouse;
+CREATE user LibraryDW_DBA identified by LibraryDW_DBA;
+GRANT ALL PRIVILEGES to LibraryDW_DBA;
+commit;
+
+-- Exit from sql plus
+
+-- Enter into oracle using sql plus ( username: LibraryDW_DBA)
+
+alter session set "_ORACLE_SCRIPT"=true;
+
+CREATE ROLE secure_appRole;
+
+--Grant select privileges to secure_appRole
+GRANT SELECT ON Library_admin TO secure_appRole;
+GRANT SELECT ON BorrowReturn_Fact TO secure_appRole;
+GRANT SELECT ON Book_Dim TO secure_appRole;
+GRANT SELECT ON Student_Dim TO secure_appRole;
+GRANT SELECT ON Time_Dim TO secure_appRole;
+
+--Create application User
+create user secure_appUser identified by secure_appUser;
+
+GRANT secure_appRole TO secure_appUser;
+
+--for application user connect to the database
+GRANT CREATE SESSION TO secure_appUser;
+commit;
+
+-- Exit from sql plus
+
+-- Enter into oracle using sql plus ( username: secure_appUser)
+
+alter session set "_ORACLE_SCRIPT"=true;
+
+SET ROLE secure_appRole;
+
+select * from LibraryDW_DBA.Time_Dim;
+
+
